@@ -1,0 +1,47 @@
+.call-out-box-two{
+    .call-out-box-container{
+        display:flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: center;
+        .call-out-box{
+            .content-box{
+                max-width:500px;
+            }
+            @media(min-width:768px){
+                width:50%;
+            }
+        }
+    }
+}
+
+.call-out-box{
+    padding:80px 20px 65px;
+    .content-box{
+        max-width:700px;
+        margin:0 auto;
+        text-align:center;
+    }
+    .button-box{
+        text-align: center;
+    }
+    &.content-button-inline{
+        .container-r{
+            @include flexbox;
+        }
+        @media(min-width:992px){
+            .content-box{
+                width:70%;
+                max-width:10000px;
+                padding-right:40px;
+                text-align:left;
+            }
+            .button-box{
+                width:30%;
+                text-align:right;
+            }
+        }
+    }
+}
+
+

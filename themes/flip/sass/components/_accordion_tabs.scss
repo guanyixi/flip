@@ -1,0 +1,48 @@
+.accordion-tabs{
+    .title{
+        cursor: pointer;
+    }
+    .content{
+        display:none;
+    }
+}
+
+.component-accordion{
+    .title{
+        position:relative;
+        font-size:2em;
+        font-weight:bold;
+        padding:5px 50px 5px 0;
+        &:after{
+            font-family: $fa;
+            content:"\f067";
+            position:absolute;
+            right:10px;
+            top:0px;
+        }
+    }
+    .title.active{
+        &:after{
+            content:"\f068";
+        }
+    }
+}
+
+.component-tabs{
+    @include clearfix;
+    .title{
+        display:inline-block;
+        background-color:$yellow;
+        padding:8px 25px;
+        font-size:1.2em;
+        font-weight:600;
+        &.active{
+            background-color:#eee;
+        }
+    }
+    .content{
+        float:left;
+        padding:25px 25px 20px;
+        background-color:#eee;
+    }
+}

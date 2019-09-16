@@ -1,0 +1,49 @@
+.slick-dots{
+    padding:15px 0 0;
+    width:100%;
+    text-align:center;
+    li{
+        list-style: none;
+        display:inline-block;
+        margin:5px;
+        button{
+            display:block;
+            font-size:0;
+            padding:0;
+            width:14px;
+            height:14px;
+            border-radius: 100%;
+            background-color:transparent;
+            border:1px solid $dark;
+        }
+        &.slick-active{
+            button{
+                background-color:$dark;
+            }
+        }
+    }
+}
+
+.slick-arrow{
+    font-size:0; //Hide the text "previous" and "next"
+    position:absolute;
+    width:70px;
+    height:70px;
+    top:50%;
+    margin-top:-35px; //half of the height of the button.
+    background-size:100% 100%; // Use images that are smae ratio as the shape of the button
+    background-repeat: no-repeat;
+    background-position:center center;
+    &.slick-prev{
+        left:-70px;
+        background-image: url(../assets/img/arrow-thin-dark-left.svg);
+        
+    }
+    &.slick-next{
+        right:-70px;
+        background-image: url(../assets/img/arrow-thin-dark-right.svg);
+    }
+}
+
+
+

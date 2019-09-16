@@ -1,0 +1,146 @@
+
+label{
+	display:block;
+	padding-bottom:5px;
+	font-size:16px;
+}
+  
+input[type="text"],
+input[type="password"],
+textarea,
+//HTML5 types
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"]{
+	display:block;
+	width:100%;
+	border:1px solid #ccc;
+	padding:10px;
+	border-radius:0;
+	font-size:16px;
+	line-height:1.5;
+	&:focus{
+		outline:0;
+		border:1px solid $primary;
+	}
+	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		color: #999;
+		font-size:14px;
+		font-style: italic;
+	}
+}
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"]{
+	background-color:#333;
+	color:white;
+	border-radius:0;
+	border:0;
+	display:inline-block;
+	padding:8px 10px;
+	font-size:16px;
+	&:active, &:visited, &:focus{
+		outline:0;
+	}
+}
+  
+select{
+	appearance:none;
+	border-radius:0;
+	display:inline-block;
+	padding:8px 40px 8px 10px;
+	background-color:transparent;
+	border:1px solid #ccc;
+	font-size:16px;
+	&:focus{
+		outline:0;
+	}
+	background-image: url(https://d30y9cdsu7xlg0.cloudfront.net/png/10897-200.png);//Use your own image.
+	background-repeat: no-repeat;
+	background-size:15px auto;
+	background-position:right 8px top 8px; //This doesn't support all browsers. Use right top, then adjust position using image.
+}
+
+//Change the autofill yellow color.
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+
+//Search form
+.search-form{
+	position:relative;
+	.search-input{
+		padding:4px 30px 4px 10px;
+	}
+	.search-submit{
+		display:none;
+		// background-color:transparent;
+		// position:absolute;
+		// top:0;
+		// right:0;
+		// width:30px;
+		// background-image: url(../assets/img/search.svg);
+		// background-repeat: no-repeat;
+		// background-position:top 4px right 5px;
+		// background-size:20px auto;
+	}
+	.clear-input{
+		display:none;
+		@include icon_plus(14px, 3px);
+		transform:rotate(45deg);
+		position:absolute;
+		right:2px;
+		top:11px;
+	}
+}
+
+//Gravity forms
+$error_color: #DB3E00;
+
+.validation_error{
+	border:0 !important;
+	color:$error_color !important;
+	background-color: #efefef;
+}
+.gform_body{
+	li.gfield{
+		padding-right:0 !important;
+	}
+	input, textarea{
+		margin:0 !important;
+		padding:8px 15px !important;
+	}
+	textarea{
+		height: 160px !important;
+	}
+
+	.gfield_error{
+		background-color:transparent !important;
+		border:0 !important;
+		padding:0 !important;
+		input, textarea{
+			border:1px solid $error_color !important;
+		}
+	}
+	.validation_message{
+		color: $error_color !important;
+	}
+}
+
+.gform_footer{
+	margin:0 !important;
+}
+

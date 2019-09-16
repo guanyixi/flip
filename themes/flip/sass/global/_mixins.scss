@@ -1,0 +1,56 @@
+// Clearfix
+@mixin clearfix{
+	&:after{
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+}
+
+@mixin overlay($color, $opacity, $inner-index){
+	position:relative;
+	&:after{
+		position:absolute;
+		content:"";
+		width:100%;
+		height:100%;
+		left:0;
+		top:0;
+		background-color:rgba($color, $opacity);
+	}
+	& > *{
+		position:relative;
+		z-index:$inner-index;
+	}
+}
+
+// Use this for ul and ol
+@mixin cleanlist{
+	ul, li{
+		margin: 0;
+		padding:0;
+		list-style: none;
+	}
+}
+
+@mixin flexbox{
+	display:flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
